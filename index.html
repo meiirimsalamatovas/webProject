@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator and Unit Converter</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="display">0</div>
+      <div class="buttons">
+        <button class="button btn-grey">AC</button>
+        <button class="button btn-grey">+/-</button>
+        <button class="button btn-grey">%</button>
+        <button class="button btn-orange">/</button>
+        <button class="button">7</button>
+        <button class="button">8</button>
+        <button class="button">9</button>
+        <button class="button btn-orange">*</button>
+        <button class="button">4</button>
+        <button class="button">5</button>
+        <button class="button">6</button>
+        <button class="button btn-orange">-</button>
+        <button class="button">1</button>
+        <button class="button">2</button>
+        <button class="button">3</button>
+        <button class="button btn-orange">+</button>
+        <button class="button zero-btn">0</button>
+        <button class="button">.</button>
+        <button class="button btn-orange">=</button>
+      </div>
+
+     
+      <div class="converter">
+        <h2>Unit Converter</h2>
+        <label for="unit-type">Select Unit Type:</label>
+        <select id="unit-type">
+          <option value="temperature">Temperature</option>
+          <option value="distance">Distance</option>
+        </select>
+
+        <div id="temperature-converter" class="converter-section">
+          <input type="number" id="temp-value" placeholder="Enter temperature" />
+          <select id="temp-unit">
+            <option value="C">Celsius</option>
+            <option value="F">Fahrenheit</option>
+            <option value="K">Kelvin</option>
+          </select>
+          <button id="convert-temp">Convert</button>
+          <div id="temp-result"></div>
+        </div>
+
+        <div id="distance-converter" class="converter-section" style="display: none;">
+          <input type="number" id="distance-value" placeholder="Enter distance" />
+          <select id="distance-unit">
+            <option value="km">Kilometers</option>
+            <option value="miles">Miles</option>
+          </select>
+          <button id="convert-distance">Convert</button>
+          <div id="distance-result"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
