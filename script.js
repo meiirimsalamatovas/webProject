@@ -1,12 +1,12 @@
 //Калькулятор
-// Находим элементы на странице: дисплей и кнопки калькулятора
+
 let display = document.querySelector(".display");
 let buttons = Array.from(document.querySelectorAll(".button"));
 
 // Добавляем обработчик событий для каждой кнопки
 buttons.forEach(button => {
   button.addEventListener("click", () => {
-    const text = button.innerText; // Получаем текст на кнопке
+    const text = button.innerText; 
 
 
     if (text === "AC") {
@@ -15,7 +15,7 @@ buttons.forEach(button => {
 
     else if (text === "=") {
       try {
-        // Пробуем вычислить результат выражения
+     
         display.innerText = Function('return ' + display.innerText)(); 
       } catch {
         display.innerText = "Error!"; 
